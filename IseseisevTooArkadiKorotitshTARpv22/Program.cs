@@ -9,7 +9,7 @@ namespace ConsoleApplication
         static void Tax()
         {
             double t = 0.13;
-            Console.WriteLine("Write down the amount of money earned: ");
+            Console.WriteLine("Kirjutage üles teenitud rahasumma: ");
             double m = int.Parse(Console.ReadLine());
             double ml = m * t;
             double totalm = m - ml;
@@ -19,9 +19,9 @@ namespace ConsoleApplication
         {
             Console.WriteLine("---------------------------------------------");
 
-            /*Console.WriteLine("Line:");
+            /*Console.WriteLine("Pakkumine:");
             string line = Console.ReadLine();
-            string vowels = "aeouiy";
+            string vowels = "iüueöõoäa";
             int lineTotal = line.Length;
             int result = 0;
             foreach (char symbol in line)
@@ -49,7 +49,7 @@ namespace ConsoleApplication
             Console.WriteLine("---------------------------------------------");
 
             /*Tax();
-            Console.WriteLine("Retry? (y/n) ");
+            Console.WriteLine("Uuesti proovida? (y/n) ");
             string ask = Console.ReadLine();
             ask.ToLower();
             if (ask=="y")
@@ -58,7 +58,7 @@ namespace ConsoleApplication
             }
             else
             {
-                Console.WriteLine("Goodbye");
+                Console.WriteLine("Hüvasti");
             }*/
 
             Console.WriteLine("---------------------------------------------");
