@@ -19,47 +19,63 @@ namespace ConsoleApplication
         {
             Console.WriteLine("---------------------------------------------");
 
-            /*Console.WriteLine("Pakkumine:");
+            //Введите с клавиатуры строку произвольной длины и подсчитайте процент вхождения гласных букв латинского алфавита в строку (не различая регистры).
+
+            /*Console.WriteLine("Pakkumine: ");
             string line = Console.ReadLine();
-            string vowels = "iüueöõoäa";
+            string glas = "iüueöõoäaIÜUEÖÕOÄA";
             int lineTotal = line.Length;
             int result = 0;
             foreach (char symbol in line)
             {
-                if (vowels.Contains(symbol.ToString()))
+                if (glas.Contains(symbol.ToString()))
                     result++;
             }
-            var percent = ((double)result / (double)lineTotal) * 100;
-            Console.WriteLine(percent+"%");*/
+            double percent = ((double)result / (double)lineTotal) * 100;
+            Console.WriteLine("vokaalid kokku: " + result);
+            Console.WriteLine("vokaalide esinemise protsent: "+percent +"%");*/
 
             Console.WriteLine("---------------------------------------------");
 
-            /*Console.Write("N = ");
-            var N = int.Parse(Console.ReadLine());
-            var a = new int[N];
-            var r = new Random();
-            var count = 0;
-            for (var i = 0; i < N; i++)
+            //Задан массив действительных чисел из N элементов (используйте генератор случайных чисел). Определить количество элементов, значения которых находятся в диапазоне от -100 до +100.
+
+            /*var rnd = new Random();
+            int[] arvud = new int[rnd.Next(100)];
+            int count = 0;
+            for (int i = 0; i < arvud.Length; i++)
             {
-                a[i] = r.Next(-3000,3000);
-                if (a[i] > -100 && a[i] < 100) count++;
+                arvud[i] = rnd.Next(-1000, 1000);
             }
-            Console.WriteLine("Count {0}", count);*/
+            foreach (int arv in arvud)
+            {
+                if (arv > -100 && arv < 100)
+                {
+                    Console.WriteLine(arv);
+                    count++;
+                }
+                    
+            }
+            Console.WriteLine("Kokku: "+count);*/
 
             Console.WriteLine("---------------------------------------------");
 
-            /*Tax();
+            //Написать подпрограмму, которая вычисляет подоходный налог для введеной пользователем зарплаты.
+
+            Tax();
             Console.WriteLine("Uuesti proovida? (y/n) ");
             string ask = Console.ReadLine();
-            ask.ToLower();
+            ask = ask.ToLower();
             if (ask=="y")
-            {
-                Tax();
-            }
-            else
+                do{
+                    Tax();
+                    Console.WriteLine("Uuesti proovida? (y/n) ");
+                    ask = Console.ReadLine();
+                    ask = ask.ToLower();
+                } while (ask == "y");
+            else if (ask != "y")
             {
                 Console.WriteLine("Hüvasti");
-            }*/
+            }
 
             Console.WriteLine("---------------------------------------------");
         }
